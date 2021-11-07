@@ -83,12 +83,12 @@ public class Mainnovo {
     }
 //conversor reais ~ dolares
     public static float real(float dinheiro) { 
-        float res = dinheiro * cotacao;
+        float res = dinheiro / cotacao;
         return res;
     }
 //conversor dolares ~ reais
     public static float dolar(float dinheiro) { 
-        float res = dinheiro / cotacao;
+        float res = dinheiro * cotacao;
         return res;
     }
     
