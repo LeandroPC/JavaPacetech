@@ -3,20 +3,20 @@ package ConversorJava;
 //biblioteca de leitura
 import java.util.Scanner; 
 
-public class Main {
+public class Mainnovo {
 //variaveis 
     static int Menu = 1;
     static int opcao;
     static float temperatura, dinheiro, cotacao;
     static boolean confirmacao;
-
+    
     public static void main(String[] args) { 
 //leitura da biblioteca scanner
         Scanner Leitor = new Scanner(System.in); 
  //função enquanto do java       
         while (Menu != 0) { 
-            System.out.println("cotação do dolar");
-            dinheiro = Leitor.nextFloat();
+           System.out.println("cotação do dolar");
+            cotacao = Leitor.nextFloat();
             
             System.out.println("Conversor de celsius para fahrenheit digite 1");
             System.out.println("Conversor de fahrenheit para celsius digite 2");
@@ -73,22 +73,22 @@ public class Main {
     }
 //conversor farenheit ~ celsius
     public static float fahrenheit(float temperatura) { 
-        float res = (float) ((temperatura * 1.8) + 32);
+        float res = (float) (temperatura * 1.8 + 32);
         return res;
     }
 //conversor celsius ~ farenheit
     public static float celsius(float temperatura) { 
-        float res = (float) ((temperatura - 32) * 0.5556);
+        float res = (float) ((temperatura - 32) / 1.8);
         return res;
     }
 //conversor reais ~ dolares
     public static float real(float dinheiro) { 
-        float res = dinheiro / cotacao;
+        float res = dinheiro * cotacao;
         return res;
     }
 //conversor dolares ~ reais
     public static float dolar(float dinheiro) { 
-        float res = dinheiro * cotacao;
+        float res = dinheiro / cotacao;
         return res;
     }
     
